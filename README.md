@@ -9,5 +9,5 @@
 
 ## Assignments
 
-* **[Project Name](./your-folder-name-here)** 
+* **[Assignment 1]
 * *More assignments coming soon...*
