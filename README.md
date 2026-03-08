@@ -9,5 +9,5 @@
 
 ## Assignments
 
-* **[Project Name](./your-folder-name-here)** - Brief description of what this project does.
+* **[Project Name](./your-folder-name-here)** 
 * *More assignments coming soon...*
