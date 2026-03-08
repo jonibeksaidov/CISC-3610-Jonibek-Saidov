@@ -9,5 +9,4 @@
 
 ## Assignments
 
-* **[Assignment 1]
-* *More assignments coming soon...*
+
