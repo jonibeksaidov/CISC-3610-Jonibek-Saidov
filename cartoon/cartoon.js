@@ -113,7 +113,7 @@ ctx.stroke();
 // =========================
 ctx.fillStyle = "#DEB887";
 
-for (let i = 0; i < 12; i++) {
+for (let i = 0; i < 15; i++) {
 
     ctx.save();
 
