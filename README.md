@@ -9,4 +9,4 @@
 
 ## Assignments
 
-- [Cartoon Assignment](assignments/Cartoon/Cartoon.html)
+- [Cartoon Assignment](cartoon/Cartoon.html)
