@@ -1,5 +1,3 @@
-# CISC-3610-Jonibek-Saidov
-
 # Jonibek Saidov
 
 **Class:** CISC 3160  
