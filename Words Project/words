@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Multimedia Dictionary</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        textarea {
+            width: 400px;
+            height: 80px;
+        }
+
+        button {
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Multimedia Dictionary</h1>
+
+    <!-- Word Selection Section -->
+    <h3>Select a Word</h3>
+
+    <select id="wordMenu" onchange="showSentence()">
+
+        <option>-- Select a Word --</option>
+
+        <option value="Apple"
+            data-sentence="The apple is red and sweet.">
+            Apple
+        </option>
+
+        <option value="Dog"
+            data-sentence="The dog likes to play outside.">
+            Dog
+        </option>
+
+        <option value="Book"
+            data-sentence="I read a book every night.">
+            Book
+        </option>
+
+        <option value="Car"
+            data-sentence="The car is very fast.">
+            Car
+        </option>
+
+        <option value="Tree"
+            data-sentence="The tree has green leaves.">
+            Tree
+        </option>
+
+    </select>
+
+    <!-- Speak Word Button -->
+    <button onclick="speakWord()">
+        Speak Word
+    </button>
+
+
+    <br><br>
+
+
+    <!-- Sentence Display Section -->
+    <h3>Sentence</h3>
+
+    <textarea id="sentenceBox" readonly></textarea>
+
+    <!-- Speak Sentence Button -->
+    <button onclick="speakSentence()">
+        Speak Sentence
+    </button>
+
+
+    <br><br>
+
+
+    <!-- Return to Portfolio -->
+    <a href="../index.html">
+        Return to Portfolio Page
+    </a>
+
+
+    <script>
+
+        // Function to display the sentence
+        function showSentence() {
+
+            // Get the dropdown menu
+            const menu = document.getElementById("wordMenu");
+
+            // Get the textarea
+            const sentenceBox = document.getElementById("sentenceBox");
+
+            // Check if user selected a word
+            if (menu.selectedIndex > 0) {
+
+                // Get selected option
+                const selectedOption =
+                    menu.options[menu.selectedIndex];
+
+                // Display sentence
+                sentenceBox.value =
+                    selectedOption.dataset.sentence;
+
+            }
+
+            else {
+
+                sentenceBox.value = "";
+
+            }
+
+        }
+
+
+        // Web Speech API function
+        function speak(textToSay) {
+
+            const message =
+                new SpeechSynthesisUtterance(textToSay);
+
+            message.pitch = 1.2;
+
+            message.rate = 1.0;
+
+            window.speechSynthesis.speak(message);
+
+        }
+
+
+        // Speak the selected word
+        function speakWord() {
+
+            const menu =
+                document.getElementById("wordMenu");
+
+            if (menu.selectedIndex > 0) {
+
+                speak(menu.value);
+
+            }
+
+        }
+
+
+        // Speak the sentence
+        function speakSentence() {
+
+            const sentenceBox =
+                document.getElementById("sentenceBox");
+
+            if (sentenceBox.value !== "") {
+
+                speak(sentenceBox.value);
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
