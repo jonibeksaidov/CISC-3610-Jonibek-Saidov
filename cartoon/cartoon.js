@@ -134,23 +134,3 @@ for (let i = 0; i < 15; i++) {
 }
 
 
-// =========================
-// Clouds
-// =========================
-function drawCloud(x, y) {
-
-    ctx.fillStyle = "white";
-
-    ctx.beginPath();
-    ctx.arc(x, y, 25, 0, Math.PI * 2);
-
-    ctx.arc(x + 25, y - 10, 30, 0, Math.PI * 2);
-
-    ctx.arc(x + 55, y, 25, 0, Math.PI * 2);
-
-    ctx.fill();
-}
-
-// Draw multiple clouds
-drawCloud(200, 120);
-drawCloud(650, 100);
