@@ -10,4 +10,4 @@
 ## Assignments
 
 - [Cartoon Assignment](cartoon/cartoon.html)
-- [Bootstrap Assignment](bootstrap/index.html)
+- [Bootstrap Assignment](bootstrap-hw/index.html)
