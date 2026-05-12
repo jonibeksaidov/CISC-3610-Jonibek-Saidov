@@ -10,4 +10,4 @@
 - [Cartoon Assignment](cartoon/cartoon.html)
 - [Bootstrap Assignment](bootstrap-hw/index.html)
 - [Multimedia Dictionary](words-project/words.html)
-- [Video Lab](video-Lab/Videos.html)
+- [Video Lab](video-Lab/videos.html)
