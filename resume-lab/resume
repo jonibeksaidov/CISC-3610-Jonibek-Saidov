@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonibek Resume</title>
+
+    <!-- Bootstrap 5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Jonibek Resume</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Header -->
+    <div class="container text-center mt-5">
+        <h1>Jonibek Saidov</h1>
+        <p>Brooklyn, NY | jonibek.saidov03@gmail.com | 929-799-1815</p>
+        <p>LinkedIn: linkedin.com/in/jonibeksaidov03</p>
+    </div>
+
+
+    <!-- Summary -->
+    <div class="container mt-5" id="summary">
+        <h2>Summary</h2>
+        <p>
+            Computer Science student at Brooklyn College with experience in software development,
+            tutoring, customer service, and game programming. Interested in web development,
+            programming, and technology.
+        </p>
+    </div>
+
+
+    <!-- Education -->
+    <div class="container mt-5" id="education">
+        <h2>Education</h2>
+
+        <div class="card p-3">
+            <h4>Brooklyn College</h4>
+            <p>Bachelor of Science in Computer Science</p>
+            <p>Class of 2027 | GPA: 3.7</p>
+            <p>Dean’s List (4 Semesters)</p>
+        </div>
+    </div>
+
+
+    <!-- Experience -->
+    <div class="container mt-5" id="experience">
+        <h2>Work Experience</h2>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>The UPS Store</h5>
+                    <p>Retail Sales Associate</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Kumon</h5>
+                    <p>Tutor</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Universal Phoenix</h5>
+                    <p>Game Programmer Intern</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Skills -->
+    <div class="container mt-5" id="skills">
+        <h2>Skills</h2>
+
+        <ul class="list-group">
+            <li class="list-group-item">Python</li>
+            <li class="list-group-item">JavaScript</li>
+            <li class="list-group-item">HTML / CSS</li>
+            <li class="list-group-item">Java</li>
+            <li class="list-group-item">C#</li>
+            <li class="list-group-item">Unity</li>
+        </ul>
+    </div>
+
+
+    <!-- Activities -->
+    <div class="container mt-5">
+        <h2>Activities & Honors</h2>
+
+        <ul>
+            <li>The Opportunity Network Fellow</li>
+            <li>V-School Software Development Student</li>
+            <li>Inspirit AI Fellow</li>
+        </ul>
+    </div>
+
+
+    <!-- Portfolio Carousel -->
+    <div class="container mt-5" id="portfolio">
+        <h2>Projects / Portfolio</h2>
+
+        <div id="projectCarousel" class="carousel slide">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="bg-primary text-white text-center p-5">
+                        Cartoon Assignment
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="bg-success text-white text-center p-5">
+                        Multimedia Dictionary
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="bg-danger text-white text-center p-5">
+                        Bootstrap Projects
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- Return Link -->
+    <div class="text-center mt-5 mb-5">
+        <a href="../index.html">Return to Portfolio Page</a>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
