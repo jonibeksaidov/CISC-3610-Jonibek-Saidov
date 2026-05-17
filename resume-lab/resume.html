@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonibek Resume</title>
+    <title>Bootstrap Resume</title>
 
     <!-- Bootstrap 5.3.8 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,8 +25,8 @@
                     <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
                 </ul>
             </div>
         </div>
@@ -37,17 +37,23 @@
     <div class="container text-center mt-5">
         <h1>Jonibek Saidov</h1>
         <p>Brooklyn, NY | jonibek.saidov03@gmail.com | 929-799-1815</p>
-        <p>LinkedIn: linkedin.com/in/jonibeksaidov03</p>
+
+        <p>
+            <a href="https://www.linkedin.com/in/jonibeksaidov03" target="_blank">
+                LinkedIn Profile
+            </a>
+        </p>
     </div>
 
 
     <!-- Summary -->
     <div class="container mt-5" id="summary">
         <h2>Summary</h2>
+
         <p>
-            Computer Science student at Brooklyn College with experience in software development,
-            tutoring, customer service, and game programming. Interested in web development,
-            programming, and technology.
+            Computer Science student at Brooklyn College with experience in
+            software development, tutoring, customer service, and programming.
+            Interested in software engineering, web development, and technology.
         </p>
     </div>
 
@@ -60,35 +66,64 @@
             <h4>Brooklyn College</h4>
             <p>Bachelor of Science in Computer Science</p>
             <p>Class of 2027 | GPA: 3.7</p>
-            <p>Dean’s List (4 Semesters)</p>
+            <p>Dean's List (4 Semesters)</p>
         </div>
     </div>
 
 
-    <!-- Experience -->
+    <!-- Work Experience -->
     <div class="container mt-5" id="experience">
         <h2>Work Experience</h2>
 
-        <div class="row">
+        <div class="accordion" id="workAccordion">
 
-            <div class="col-md-4">
-                <div class="card p-3">
-                    <h5>The UPS Store</h5>
-                    <p>Retail Sales Associate</p>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ups">
+                        The UPS Store - Retail Sales Associate
+                    </button>
+                </h2>
+
+                <div id="ups" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        Helped customers with shipping, packaging, and sales.
+                        Assisted over 200 customers weekly while improving
+                        customer satisfaction and resolving shipping issues.
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card p-3">
-                    <h5>Kumon</h5>
-                    <p>Tutor</p>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kumon">
+                        Kumon - Tutor
+                    </button>
+                </h2>
+
+                <div id="kumon" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Tutored students in math and reading from preschool
+                        through high school while helping improve grades and
+                        academic performance.
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card p-3">
-                    <h5>Universal Phoenix</h5>
-                    <p>Game Programmer Intern</p>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#phoenix">
+                        Universal Phoenix - Game Programmer Intern
+                    </button>
+                </h2>
+
+                <div id="phoenix" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Developed Unity minigames using C# and worked on
+                        gameplay features such as AI, power-ups, physics,
+                        and interactive mechanics.
+                    </div>
                 </div>
             </div>
 
@@ -97,67 +132,120 @@
 
 
     <!-- Skills -->
-    <div class="container mt-5" id="skills">
+    <div class="container mt-5">
         <h2>Skills</h2>
 
         <ul class="list-group">
             <li class="list-group-item">Python</li>
+            <li class="list-group-item">Java</li>
             <li class="list-group-item">JavaScript</li>
             <li class="list-group-item">HTML / CSS</li>
-            <li class="list-group-item">Java</li>
             <li class="list-group-item">C#</li>
             <li class="list-group-item">Unity</li>
         </ul>
     </div>
 
 
-    <!-- Activities -->
-    <div class="container mt-5">
+    <!-- Activities & Honors -->
+    <div class="container mt-5" id="activities">
         <h2>Activities & Honors</h2>
 
-        <ul>
-            <li>The Opportunity Network Fellow</li>
-            <li>V-School Software Development Student</li>
-            <li>Inspirit AI Fellow</li>
-        </ul>
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card p-3 h-100">
+                    <h4>The Opportunity Network</h4>
+
+                    <p>
+                        Selected as one of 162 NYC students for a six-year
+                        leadership and college readiness program focused on
+                        career development and professional growth.
+                    </p>
+
+                    <a href="https://opportunitynetwork.org/" target="_blank" class="btn btn-primary">
+                        Visit Website
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card p-3 h-100">
+                    <h4>V-School</h4>
+
+                    <p>
+                        Completed a software development program focused on
+                        HTML, CSS, and JavaScript while building web projects
+                        and improving technical skills.
+                    </p>
+
+                    <a href="https://vschool.io/" target="_blank" class="btn btn-success">
+                        Visit Website
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card p-3 h-100">
+                    <h4>Inspirit AI</h4>
+
+                    <p>
+                        Worked with a team to build a machine learning model
+                        using AdaBoost and Decision Trees to classify natural
+                        disaster tweets for emergency response.
+                    </p>
+
+                    <a href="https://www.inspiritai.com/" target="_blank" class="btn btn-danger">
+                        Visit Website
+                    </a>
+                </div>
+            </div>
+
+        </div>
     </div>
 
 
-    <!-- Portfolio Carousel -->
+    <!-- Projects -->
     <div class="container mt-5" id="portfolio">
-        <h2>Projects / Portfolio</h2>
+        <h2>Projects</h2>
 
-        <div id="projectCarousel" class="carousel slide">
+        <div class="row g-4">
 
-            <div class="carousel-inner">
-
-                <div class="carousel-item active">
-                    <div class="bg-primary text-white text-center p-5">
-                        Cartoon Assignment
-                    </div>
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h4>Cartoon Assignment</h4>
+                    <p>HTML5 Canvas cartoon scene project.</p>
+                    <a href="../cartoon/cartoon.html" class="btn btn-primary">View Project</a>
                 </div>
-
-                <div class="carousel-item">
-                    <div class="bg-success text-white text-center p-5">
-                        Multimedia Dictionary
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="bg-danger text-white text-center p-5">
-                        Bootstrap Projects
-                    </div>
-                </div>
-
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
 
-            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h4>Bootstrap Assignment</h4>
+                    <p>Bootstrap grid layout practice project.</p>
+                    <a href="../bootstrap-hw/index.html" class="btn btn-success">View Project</a>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h4>Multimedia Dictionary</h4>
+                    <p>Interactive speech project using JavaScript.</p>
+                    <a href="../words-project/words.html" class="btn btn-warning">View Project</a>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h4>Video Lab</h4>
+                    <p>Embedded YouTube videos webpage project.</p>
+                    <a href="../video-lab/videos.html" class="btn btn-danger">View Project</a>
+                </div>
+            </div>
 
         </div>
     </div>
