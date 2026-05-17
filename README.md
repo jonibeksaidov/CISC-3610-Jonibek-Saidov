@@ -11,3 +11,4 @@
 - [Bootstrap Assignment](bootstrap-hw/index.html)
 - [Multimedia Dictionary](words-project/words.html)
 - [Video Lab](video-lab/videos.html)
+- [Bootstrap Resume](resume-lab/resume.html)
