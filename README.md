@@ -12,3 +12,4 @@
 - [Multimedia Dictionary](words-project/words.html)
 - [Video Lab](video-lab/videos.html)
 - [Bootstrap Resume](resume-lab/resume.html)
+- [Wick Animation Project](video-animation/video.html)
