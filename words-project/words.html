@@ -3,24 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Multimedia Dictionary</title>
 
     <style>
 
         body {
-            font-family: Arial;
-            margin: 40px;
+            font-family: Arial, sans-serif;
+            background-color: #e6f2ff;
             text-align: center;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            background-color: white;
+            width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            color: #003366;
+        }
+
+        h3 {
+            color: #0059b3;
+        }
+
+        select {
+            padding: 10px;
+            width: 220px;
+            font-size: 16px;
         }
 
         textarea {
-            width: 400px;
-            height: 80px;
+            width: 350px;
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+            resize: none;
         }
 
         button {
+            padding: 10px 15px;
+            background-color: #0059b3;
+            color: white;
+            border: none;
+            cursor: pointer;
             margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #003d80;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0059b3;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #003366;
         }
 
     </style>
@@ -28,96 +75,79 @@
 
 <body>
 
-    <h1>Multimedia Dictionary</h1>
+    <div class="container">
 
-    <!-- Word Selection Section -->
-    <h3>Select a Word</h3>
+        <h1>Multimedia Dictionary</h1>
 
-    <select id="wordMenu" onchange="showSentence()">
+        <!-- Word Selection Section -->
+        <h3>Select a Word</h3>
 
-        <option>-- Select a Word --</option>
+        <select id="wordMenu" onchange="showSentence()">
 
-        <option value="Orange"
-            data-sentence="I like to drink sweet orange juice.">
-            Orange
-        </option>
+            <option>-- Select a Word --</option>
 
-        <option value="Dog"
-            data-sentence="The dog likes to play outside.">
-            Dog
-        </option>
+            <option value="Orange"
+                data-sentence="I like to drink sweet orange juice.">
+                Orange
+            </option>
 
-        <option value="Soccer"
-            data-sentence="I like to play soccer everyday.">
-            Soccer
-        </option>
+            <option value="Dog"
+                data-sentence="The dog likes to play outside.">
+                Dog
+            </option>
 
-        <option value="Car"
-            data-sentence="The car is very fast.">
-            Car
-        </option>
+            <option value="Soccer"
+                data-sentence="I like to play soccer everyday.">
+                Soccer
+            </option>
 
-        <option value="Tree"
-            data-sentence="The tree has green leaves.">
-            Tree
-        </option>
+            <option value="Car"
+                data-sentence="The car is very fast.">
+                Car
+            </option>
 
-    </select>
+            <option value="Tree"
+                data-sentence="The tree has green leaves.">
+                Tree
+            </option>
 
-    <!-- Speak Word Button -->
-    <button onclick="speakWord()">
-        Speak Word
-    </button>
+        </select>
 
+        <button onclick="speakWord()">Speak Word</button>
 
-    <br><br>
+        <br><br>
 
+        <!-- Sentence Display Section -->
+        <h3>Sentence</h3>
 
-    <!-- Sentence Display Section -->
-    <h3>Sentence</h3>
+        <textarea id="sentenceBox" readonly></textarea>
 
-    <textarea id="sentenceBox" readonly></textarea>
+        <br><br>
 
-    <!-- Speak Sentence Button -->
-    <button onclick="speakSentence()">
-        Speak Sentence
-    </button>
+        <button onclick="speakSentence()">Speak Sentence</button>
 
+        <br><br>
 
-    <br><br>
+        <!-- Return Link -->
+        <a href="../index.html">
+            Return to Portfolio Page
+        </a>
 
-
-    <!-- Return to Portfolio -->
-    <a href="../index.html">
-        Return to Portfolio Page
-    </a>
-
+    </div>
 
     <script>
 
-        // Function to display the sentence
         function showSentence() {
 
-            // Get the dropdown menu
             const menu = document.getElementById("wordMenu");
-
-            // Get the textarea
             const sentenceBox = document.getElementById("sentenceBox");
 
-            // Check if user selected a word
             if (menu.selectedIndex > 0) {
 
-                // Get selected option
-                const selectedOption =
-                    menu.options[menu.selectedIndex];
+                const selectedOption = menu.options[menu.selectedIndex];
+                sentenceBox.value = selectedOption.dataset.sentence;
 
-                // Display sentence
-                sentenceBox.value =
-                    selectedOption.dataset.sentence;
-
-            }
-
-            else {
+            } else {
 
                 sentenceBox.value = "";
 
@@ -125,47 +155,33 @@
 
         }
 
-
-        // Web Speech API function
         function speak(textToSay) {
 
-            const message =
-                new SpeechSynthesisUtterance(textToSay);
+            const message = new SpeechSynthesisUtterance(textToSay);
 
             message.pitch = 1.2;
-
             message.rate = 1.0;
 
             window.speechSynthesis.speak(message);
 
         }
 
-
-        // Speak the selected word
         function speakWord() {
 
-            const menu =
-                document.getElementById("wordMenu");
+            const menu = document.getElementById("wordMenu");
 
             if (menu.selectedIndex > 0) {
-
                 speak(menu.value);
-
             }
 
         }
 
-
-        // Speak the sentence
         function speakSentence() {
 
-            const sentenceBox =
-                document.getElementById("sentenceBox");
+            const sentenceBox = document.getElementById("sentenceBox");
 
             if (sentenceBox.value !== "") {
-
                 speak(sentenceBox.value);
-
             }
 
         }
